@@ -175,3 +175,11 @@ body.lightboxOpen{overflow:hidden}
 .bondedPanel{position:relative;overflow:hidden}
 .bondedPanel:before{content:"♡";position:absolute;right:20px;top:8px;font-size:46px;color:#ff499344;font-weight:800;pointer-events:none}
 .bondedPanel .eyebrow,.bondedPanel p{position:relative;z-index:1}
+
+
+/* Keep the bonded-pair story first, then clearly separate the rescue policy and matching-help note. */
+.policyDivider{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.policyDivider>.eyebrow{margin-bottom:8px}
+.policyDivider>p{margin:8px 0 0;line-height:1.65}
+.policyQuestion{margin-top:18px!important;padding-top:16px;border-top:1px solid #f0d4e0}
+.bondedPanel .policyDivider{position:relative;z-index:1}
