@@ -183,3 +183,6 @@ body.lightboxOpen{overflow:hidden}
 .policyDivider>p{margin:8px 0 0;line-height:1.65}
 .policyQuestion{margin-top:18px!important;padding-top:16px;border-top:1px solid #f0d4e0}
 .bondedPanel .policyDivider{position:relative;z-index:1}
+
+.catBackRow{margin:0 0 16px;display:flex;justify-content:flex-start}
+.catBackRow .btn{border:1px solid var(--line)}
