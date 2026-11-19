@@ -22,3 +22,52 @@ document.getElementById("site-footer").innerHTML=footer;
 document.getElementById("menu").addEventListener("click",()=>document.getElementById("navlinks").classList.toggle("open"));
 document.querySelectorAll(".catThumb").forEach((thumb)=>thumb.addEventListener("click",()=>{const gallery=thumb.closest(".catGallery");const hero=gallery.querySelector(".catHeroImg");hero.src=thumb.dataset.image;gallery.querySelectorAll(".catThumb").forEach(t=>t.classList.remove("active"));thumb.classList.add("active");}));
 
+
+
+/* Profile polish */
+if (page === "cyrus" || page === "kian") {
+  const title = document.querySelector(".catTitle");
+  const intro = document.querySelector(".catIntro");
+  const quick = document.querySelector(".catQuick");
+  if (title && intro && quick) {
+    title.classList.remove("catTitleUnder");
+    title.classList.add("profileHeading");
+    intro.insertBefore(title, quick);
+    title.style.textAlign = "left";
+    quick.innerHTML = '<div><small>Age</small><strong>Kitten · under 1 year</strong></div><div><small>Gender</small><strong>Male</strong></div><div><small>Size</small><strong>Medium · 7–11 lbs</strong></div><div><small>Breed</small><strong>Tabby</strong></div>';
+  }
+  const traits = document.querySelector(".catSections .traitGrid");
+  if (traits) {
+    traits.innerHTML = page === "cyrus"
+      ? '<div><small>Personality</small><strong>Playful & curious</strong></div><div><small>Favorite activities</small><strong>Cat wheel & cat trees</strong></div><div><small>Favorite playmate</small><strong>Kian</strong></div><div><small>Coat</small><strong>Short gray tabby</strong></div>'
+      : '<div><small>Companion</small><strong>Cyrus</strong></div><div><small>Home life</small><strong>Raised in foster care</strong></div><div><small>Coat</small><strong>Short tabby</strong></div>';
+  }
+  document.querySelectorAll(".catSections .panel h2").forEach(h => {
+    if (h.textContent.trim() === "Care checklist") h.textContent = "Health & Care";
+  });
+  document.querySelectorAll(".careItem").forEach((item, i) => {
+    const mark = item.querySelector("span");
+    if (mark) mark.textContent = ["💗","🩺","🌿","🐾","✨","🏡","💛","🐱"][i] || "💗";
+    item.classList.add(i % 2 ? "careTone1" : "careTone0");
+  });
+  document.querySelectorAll(".compatGrid strong").forEach(el => {
+    if (el.textContent.trim() === "Confirm") el.textContent = "Yes";
+  });
+  const pair = document.querySelector(".pairNotice");
+  const sections = document.querySelector(".catSections");
+  const adopt = document.querySelector(".adoptPanel");
+  if (pair && sections) {
+    pair.classList.add("pairPanel");
+    if (adopt) sections.insertBefore(pair, adopt);
+    else sections.appendChild(pair);
+  }
+  const video = document.querySelector(".videoNote");
+  if (video) video.remove();
+  const hero = document.querySelector(".catHeroImg");
+  if (hero && page === "cyrus") {
+    hero.addEventListener("error", function retryPhoto() {
+      hero.removeEventListener("error", retryPhoto);
+      hero.src = "https://dbw3zep4prcju.cloudfront.net/animal/df8ae764-a6cd-4113-9e02-4df386b86e8f/image/7868a75e-3e46-405e-b9a0-2435a7d1bdc8.jpg";
+    });
+  }
+}
