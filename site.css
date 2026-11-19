@@ -161,4 +161,4 @@ body.lightboxOpen{overflow:hidden}
 @media(max-width:760px){.rosterCounter{align-items:flex-start;flex-direction:column}}
 
 /* Rotate the third Hyacinth photo, which is sideways in the Petfinder source image. */
-.rotatedPetPhoto{transform:rotate(90deg);object-fit:contain!important;background:#fff}
+.rotatedPetPhoto{transform:rotate(-90deg);object-fit:contain!important;background:#fff}
