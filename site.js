@@ -141,7 +141,7 @@ if (page === "cyrus" || page === "kian") {
         ' are a bonded pair looking for a home together.</strong></p>' +
         '<p>Per our adoption policy, kittens five months and younger are adopted in pairs, and bonded pairs must be adopted together.</p>';
     }
-    intro.querySelectorAll(".videoNote").forEach(el => el.remove());
+    top.querySelectorAll(".videoNote").forEach(el => el.remove());
     sections.querySelectorAll(".panel").forEach(panel => {
       const heading = panel.querySelector("h2");
       if (!heading) return;
@@ -158,6 +158,7 @@ if (page === "cyrus" || page === "kian") {
           note.textContent = "A smooth transition into a new home starts with slow, positive interactions. Every cat is different, so we encourage you to reach out to us directly with any questions about compatibility or introducing a new cat to your household. We’re happy to help.";
           panel.appendChild(note);
         }
+        note.textContent = "A smooth transition into a new home starts with slow, positive interactions. Every cat is different, so we encourage you to reach out to us directly with any questions about compatibility or introducing a new cat to your household. We’re happy to help.";
       }
       if (label === "meet " + catName.toLowerCase()) heading.textContent = "About " + catName;
       if (label === "ready to meet " + catName.toLowerCase() + "?") heading.textContent = "How to Adopt";
