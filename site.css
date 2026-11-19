@@ -143,3 +143,13 @@ body.lightboxOpen{overflow:hidden}
  .lightboxPrev{left:5px}.lightboxNext{right:5px}
  .lightboxClose{top:10px;right:10px}
 }
+
+/* Unified photo + video media strip. Video thumbnails remain linked to their Petfinder-hosted playback. */
+.catThumbs .catVideoPreview{height:105px;aspect-ratio:1/1;border-radius:12px;min-width:0}
+.catThumbs .catVideoPreview img{height:100%;width:100%;object-fit:cover}
+.catThumbs .catVideoPreview span{left:5px;right:5px;bottom:5px;padding:5px 4px;font-size:10px}
+.catThumbs .videoMoreTile{height:105px;min-height:0;aspect-ratio:1/1}
+@media(max-width:760px){
+ .catThumbs .catVideoPreview,.catThumbs .videoMoreTile{height:78px}
+ .catThumbs .catVideoPreview span{font-size:9px;left:3px;right:3px;bottom:3px;padding:4px 2px}
+}
