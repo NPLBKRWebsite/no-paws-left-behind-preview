@@ -22,6 +22,70 @@ document.getElementById("site-footer").innerHTML=footer;
 document.getElementById("menu").addEventListener("click",()=>document.getElementById("navlinks").classList.toggle("open"));
 document.querySelectorAll(".catThumb").forEach((thumb)=>thumb.addEventListener("click",()=>{const gallery=thumb.closest(".catGallery");const hero=gallery.querySelector(".catHeroImg");hero.src=thumb.dataset.image;gallery.querySelectorAll(".catThumb").forEach(t=>t.classList.remove("active"));thumb.classList.add("active");}));
 
+/* Full-screen photo viewer with keyboard and arrow navigation */
+if (page === "cyrus" || page === "kian") {
+  const gallery = document.querySelector(".catGallery");
+  if (gallery) {
+    const hero = gallery.querySelector(".catHeroImg");
+    const thumbs = Array.from(gallery.querySelectorAll(".catThumb"));
+    const photos = thumbs.map(t => t.dataset.image);
+    const modal = document.createElement("div");
+    modal.className = "photoLightbox";
+    modal.setAttribute("role","dialog");
+    modal.setAttribute("aria-modal","true");
+    modal.setAttribute("aria-label","Photo gallery");
+    modal.innerHTML = '<button class="lightboxClose" aria-label="Close gallery">×</button><button class="lightboxArrow lightboxPrev" aria-label="Previous photo">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="lightboxArrow lightboxNext" aria-label="Next photo">›</button>';
+    document.body.appendChild(modal);
+    const modalImg = modal.querySelector("img");
+    const caption = modal.querySelector("figcaption");
+    let photoIndex = 0;
+    const showPhoto = (index) => {
+      photoIndex = (index + photos.length) % photos.length;
+      modalImg.src = photos[photoIndex];
+      modalImg.alt = (page === "cyrus" ? "Cyrus" : "Kian") + " photo " + (photoIndex + 1);
+      caption.textContent = (photoIndex + 1) + " of " + photos.length;
+      thumbs.forEach((t,i)=>t.classList.toggle("active",i===photoIndex));
+      hero.src = photos[photoIndex];
+    };
+    const openViewer = (index) => { showPhoto(index); modal.classList.add("open"); document.body.classList.add("lightboxOpen"); };
+    const closeViewer = () => { modal.classList.remove("open"); document.body.classList.remove("lightboxOpen"); };
+    hero.addEventListener("click",()=>openViewer(Math.max(0,photos.indexOf(hero.src))));
+    thumbs.forEach((t,i)=>t.addEventListener("click",()=>openViewer(i)));
+    modal.querySelector(".lightboxClose").addEventListener("click",closeViewer);
+    modal.querySelector(".lightboxPrev").addEventListener("click",()=>showPhoto(photoIndex-1));
+    modal.querySelector(".lightboxNext").addEventListener("click",()=>showPhoto(photoIndex+1));
+    modal.addEventListener("click",e=>{if(e.target===modal)closeViewer();});
+    document.addEventListener("keydown",e=>{
+      if(!modal.classList.contains("open"))return;
+      if(e.key==="Escape")closeViewer();
+      if(e.key==="ArrowLeft")showPhoto(photoIndex-1);
+      if(e.key==="ArrowRight")showPhoto(photoIndex+1);
+    });
+    const photoStrip=gallery.querySelector(".catThumbs");
+    if(photos.length>4 && photoStrip){
+      thumbs.slice(3).forEach(t=>t.hidden=true);
+      const more=document.createElement("button");
+      more.className="galleryMoreTile";
+      more.innerHTML='<span>View all photos</span><strong>'+photos.length+' photos</strong>';
+      more.addEventListener("click",()=>openViewer(3));
+      photoStrip.appendChild(more);
+    }
+    const videoStrip=gallery.querySelector(".catVideos");
+    if(videoStrip){
+      const videos=Array.from(videoStrip.querySelectorAll(".catVideoPreview"));
+      if(videos.length>2){
+        videos.slice(1).forEach(v=>v.hidden=true);
+        const more=document.createElement("a");
+        more.className="galleryMoreTile videoMoreTile";
+        more.href=videos[0].href;
+        more.target="_blank";more.rel="noopener";
+        more.innerHTML='<span>View all videos</span><strong>'+videos.length+' videos</strong>';
+        videoStrip.appendChild(more);
+      }
+    }
+  }
+}
+
 
 
 
@@ -72,9 +136,9 @@ if (page === "cyrus" || page === "kian") {
     if (pair) {
       pair.classList.add("pairPanel");
       pair.innerHTML =
-        '<div class="eyebrow">Bonded Pair</div>' +
+        '<div class="eyebrow">Bonded Pair: <a class="pairCatLink" href="' + otherName.toLowerCase() + '.html">' + otherName + '</a></div>' +
         '<p><strong>' + catName + ' and ' + otherName +
-        ' are a bonded pair and are looking for a home together.</strong></p>' +
+        ' are a bonded pair looking for a home together.</strong></p>' +
         '<p>Per our adoption policy, kittens five months and younger are adopted in pairs, and bonded pairs must be adopted together.</p>';
     }
     intro.querySelectorAll(".videoNote").forEach(el => el.remove());
@@ -91,7 +155,7 @@ if (page === "cyrus" || page === "kian") {
         if (!note) {
           note = document.createElement("p");
           note.className = "compatNote";
-          note.textContent = "The information above is based on what we know about each cat. A smooth transition into a new home starts with slow, positive introductions and allowing your new cat time to adjust. Every cat is different, so we encourage you to reach out to us directly with any questions about compatibility or introducing your new cat to your household.";
+          note.textContent = "A smooth transition into a new home starts with slow, positive interactions. Every cat is different, so we encourage you to reach out to us directly with any questions about compatibility or introducing a new cat to your household. We’re happy to help.";
           panel.appendChild(note);
         }
       }
