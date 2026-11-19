@@ -89,3 +89,9 @@
  .catQuick>div{padding:12px}
  .catQuick strong{font-size:14px}
 }
+
+/* Compact bonded-pair notice below the profile actions */
+.catIntro .pairPanel{margin:16px 0 0;padding:18px 20px!important;min-height:0;border-radius:18px;background:linear-gradient(110deg,#fff0f6,#edf9f7);border:1px solid #f0dbe4}
+.catIntro .pairPanel .eyebrow{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.catIntro .pairPanel p{font-size:14px;line-height:1.55;margin:8px 0 0}
+.catIntro .pairPanel p+p{font-size:12px;color:var(--muted)}
