@@ -102,3 +102,44 @@
 .catVideoPreview img{width:100%;height:100%;object-fit:cover;display:block;opacity:.82}
 .catVideoPreview span{position:absolute;left:10px;right:10px;bottom:9px;color:white;font-size:11px;font-weight:800;text-shadow:0 1px 4px #000;background:#0b3538a6;border-radius:20px;padding:6px 9px;text-align:center}
 @media(max-width:760px){.catVideos{gap:8px}}
+
+/* Profile header aligns with the top of the portrait */
+.catProfile{align-items:start!important}
+.catIntro{align-self:start;padding-top:0!important}
+.profileHeading{margin:0 0 18px!important}
+.profileHeading h1{font-size:clamp(48px,5.4vw,68px)!important;line-height:.98}
+.catIntro .pairPanel{margin-top:20px;padding:22px 24px!important;min-height:0}
+.catIntro .pairPanel .eyebrow{font-size:12px}
+.catIntro .pairPanel .eyebrow a{color:var(--teal);font-weight:900;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.catIntro .pairPanel p{font-size:15px;line-height:1.55;margin-top:9px}
+.catIntro .pairPanel p+p{font-size:13px}
+.catHeroImg{cursor:zoom-in}
+.catThumb{cursor:zoom-in}
+.catThumb[hidden],.catVideoPreview[hidden]{display:none!important}
+.galleryMoreTile{min-height:88px;border:0;border-radius:14px;background:linear-gradient(#0008,#0009),#788080;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;text-align:center;font-size:13px;font-weight:800;cursor:pointer;padding:10px}
+.galleryMoreTile strong{font-size:12px;opacity:.9}
+.videoMoreTile{text-decoration:none;aspect-ratio:16/9}
+.catVideos .galleryMoreTile{min-height:0}
+.photoLightbox{position:fixed;inset:0;z-index:9999;background:rgba(8,17,20,.94);display:none;align-items:center;justify-content:center;padding:64px 72px}
+.photoLightbox.open{display:flex}
+.photoLightbox figure{margin:0;max-width:min(1100px,88vw);max-height:82vh;display:flex;flex-direction:column;align-items:center;gap:12px}
+.photoLightbox img{display:block;max-width:100%;max-height:76vh;object-fit:contain;border-radius:12px}
+.photoLightbox figcaption{color:#fff;font-size:14px}
+.lightboxClose,.lightboxArrow{position:absolute;border:0;color:#fff;background:#ffffff24;cursor:pointer;border-radius:50%;display:grid;place-items:center}
+.lightboxClose{top:22px;right:24px;width:46px;height:46px;font-size:32px}
+.lightboxArrow{top:50%;transform:translateY(-50%);width:48px;height:58px;font-size:42px;line-height:1}
+.lightboxPrev{left:18px}.lightboxNext{right:18px}
+body.lightboxOpen{overflow:hidden}
+@media(max-width:760px){
+ .catProfile{align-items:start!important}
+ .catIntro{padding-top:0!important}
+ .profileHeading{margin-bottom:16px!important}
+ .profileHeading h1{font-size:48px!important}
+ .catIntro .pairPanel{margin-top:16px;padding:18px!important}
+ .photoLightbox{padding:58px 12px 24px}
+ .photoLightbox figure{max-width:96vw}
+ .photoLightbox img{max-height:75vh}
+ .lightboxArrow{width:38px;height:48px;font-size:34px;background:#0007}
+ .lightboxPrev{left:5px}.lightboxNext{right:5px}
+ .lightboxClose{top:10px;right:10px}
+}
