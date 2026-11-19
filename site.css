@@ -153,3 +153,9 @@ body.lightboxOpen{overflow:hidden}
  .catThumbs .catVideoPreview,.catThumbs .videoMoreTile{height:78px}
  .catThumbs .catVideoPreview span{font-size:9px;left:3px;right:3px;bottom:3px;padding:4px 2px}
 }
+
+/* Imported Petfinder profiles */
+.rosterCounter{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;background:#fff7fa;border:1px solid #f6d3e2;border-radius:14px;padding:14px 18px;margin:0 0 22px;text-align:left}
+.rosterCounter strong{color:var(--teal);font-size:15px}.rosterCounter span{color:var(--muted);font-size:13px}
+.importedProfileNote{font-size:13px;color:var(--muted)}
+@media(max-width:760px){.rosterCounter{align-items:flex-start;flex-direction:column}}
