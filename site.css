@@ -162,3 +162,11 @@ body.lightboxOpen{overflow:hidden}
 
 /* Rotate the third Hyacinth photo, which is sideways in the Petfinder source image. */
 .rotatedPetPhoto{transform:rotate(-90deg);object-fit:contain!important;background:#fff}
+
+.adoptionPolicyPanel{position:relative;overflow:hidden;background:linear-gradient(120deg,#fff3f8 0%,#fff 52%,#eefaf8 100%);border:1px solid #f1dce6!important;padding:24px!important;border-radius:20px!important}
+.adoptionPolicyPanel:before{content:'♡';position:absolute;right:20px;top:8px;font-size:46px;color:#ff499344;font-weight:800}
+.adoptionPolicyPanel .eyebrow{font-size:13px!important;letter-spacing:.1em;color:#0b8b8e!important;font-weight:900}
+.adoptionPolicyPanel p{font-size:15px!important;line-height:1.65!important;max-width:720px;margin:12px 0 0!important;color:#46545a!important}
+.adoptionPolicyPanel .policyQuestion{margin-top:18px!important;padding-top:16px;border-top:1px solid #f0d4e0}
+.bondedPanel .eyebrow a{color:#0b8b8e;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;font-weight:900}
+.compatDisclaimer{font-size:13px;line-height:1.6;color:var(--muted);margin:16px 0 0;padding:13px 15px;background:#f6f8f7;border-left:3px solid #0b8b8e;border-radius:0 12px 12px 0}
