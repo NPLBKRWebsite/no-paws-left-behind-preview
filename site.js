@@ -34,23 +34,53 @@ if (page === "cyrus" || page === "kian") {
     modal.setAttribute("role","dialog");
     modal.setAttribute("aria-modal","true");
     modal.setAttribute("aria-label","Photo gallery");
-    modal.innerHTML = '<button class="lightboxClose" aria-label="Close gallery">×</button><button class="lightboxArrow lightboxPrev" aria-label="Previous photo">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="lightboxArrow lightboxNext" aria-label="Next photo">›</button>';
+    modal.innerHTML = '<button class="lightboxClose" aria-label="Close gallery">×</button><button class="lightboxArrow lightboxPrev" aria-label="Previous photo">‹</button><figure><img alt=""><video controls playsinline preload="metadata" hidden></video><figcaption></figcaption></figure><button class="lightboxArrow lightboxNext" aria-label="Next photo">›</button>';
     document.body.appendChild(modal);
     const modalImg = modal.querySelector("img");
+    const modalVideo = modal.querySelector("video");
     const caption = modal.querySelector("figcaption");
     let photoIndex = 0;
+    const videoFiles = page === "cyrus"
+      ? ["/media/cyrus-video-1.mp4","/media/cyrus-video-2.mp4"]
+      : [];
+    const videoTiles = Array.from(gallery.querySelectorAll(".catVideoPreview"));
     const showPhoto = (index) => {
       photoIndex = (index + photos.length) % photos.length;
+      modalVideo.pause();
+      modalVideo.hidden = true;
+      modalImg.hidden = false;
       modalImg.src = photos[photoIndex];
       modalImg.alt = (page === "cyrus" ? "Cyrus" : "Kian") + " photo " + (photoIndex + 1);
-      caption.textContent = (photoIndex + 1) + " of " + photos.length;
+      caption.textContent = (photoIndex + 1) + " of " + photos.length + " photos";
       thumbs.forEach((t,i)=>t.classList.toggle("active",i===photoIndex));
       hero.src = photos[photoIndex];
     };
     const openViewer = (index) => { showPhoto(index); modal.classList.add("open"); document.body.classList.add("lightboxOpen"); };
-    const closeViewer = () => { modal.classList.remove("open"); document.body.classList.remove("lightboxOpen"); };
+    const openVideo = (index) => {
+      modalImg.hidden = true;
+      modalVideo.hidden = false;
+      modalVideo.pause();
+      modalVideo.src = videoFiles[index];
+      modalVideo.currentTime = 0;
+      caption.textContent = "Video " + (index + 1) + " of " + videoFiles.length;
+      modal.classList.add("open");
+      document.body.classList.add("lightboxOpen");
+      modalVideo.play().catch(()=>{});
+    };
+    const closeViewer = () => {
+      modalVideo.pause();
+      modalVideo.removeAttribute("src");
+      modalVideo.load();
+      modal.classList.remove("open");
+      document.body.classList.remove("lightboxOpen");
+    };
     hero.addEventListener("click",()=>openViewer(Math.max(0,photos.indexOf(hero.src))));
     thumbs.forEach((t,i)=>t.addEventListener("click",()=>openViewer(i)));
+    videoTiles.forEach((tile,i)=>{
+      tile.href = "#";
+      tile.removeAttribute("target");
+      tile.addEventListener("click",e=>{e.preventDefault();openVideo(i);});
+    });
     modal.querySelector(".lightboxClose").addEventListener("click",closeViewer);
     modal.querySelector(".lightboxPrev").addEventListener("click",()=>showPhoto(photoIndex-1));
     modal.querySelector(".lightboxNext").addEventListener("click",()=>showPhoto(photoIndex+1));
