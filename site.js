@@ -62,26 +62,35 @@ if (page === "cyrus" || page === "kian") {
       if(e.key==="ArrowRight")showPhoto(photoIndex+1);
     });
     const photoStrip=gallery.querySelector(".catThumbs");
+    const videoStrip=gallery.querySelector(".catVideos");
+    const videos=videoStrip ? Array.from(videoStrip.querySelectorAll(".catVideoPreview")) : [];
+    if(videoStrip && photoStrip){
+      videos.forEach(video=>{
+        video.classList.add("galleryVideoTile");
+        photoStrip.appendChild(video);
+      });
+      videoStrip.remove();
+    }
     if(photos.length>4 && photoStrip){
       thumbs.slice(3).forEach(t=>t.hidden=true);
       const more=document.createElement("button");
+      more.type="button";
       more.className="galleryMoreTile";
       more.innerHTML='<span>View all photos</span><strong>'+photos.length+' photos</strong>';
       more.addEventListener("click",()=>openViewer(3));
       photoStrip.appendChild(more);
     }
-    const videoStrip=gallery.querySelector(".catVideos");
-    if(videoStrip){
-      const videos=Array.from(videoStrip.querySelectorAll(".catVideoPreview"));
-      if(videos.length>2){
-        videos.slice(1).forEach(v=>v.hidden=true);
-        const more=document.createElement("a");
-        more.className="galleryMoreTile videoMoreTile";
-        more.href=videos[0].href;
-        more.target="_blank";more.rel="noopener";
-        more.innerHTML='<span>View all videos</span><strong>'+videos.length+' videos</strong>';
-        videoStrip.appendChild(more);
-      }
+    if(videos.length>2 && photoStrip){
+      videos.slice(1).forEach(video=>video.hidden=true);
+      const more=document.createElement("button");
+      more.type="button";
+      more.className="galleryMoreTile videoMoreTile";
+      more.innerHTML='<span>View all videos</span><strong>'+videos.length+' videos</strong>';
+      more.addEventListener("click",()=>{
+        videos.slice(1).forEach(video=>video.hidden=false);
+        more.remove();
+      });
+      photoStrip.appendChild(more);
     }
   }
 }
