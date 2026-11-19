@@ -95,3 +95,10 @@
 .catIntro .pairPanel .eyebrow{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
 .catIntro .pairPanel p{font-size:14px;line-height:1.55;margin:8px 0 0}
 .catIntro .pairPanel p+p{font-size:12px;color:var(--muted)}
+
+/* Petfinder video preview tiles; the videos themselves open on Petfinder */
+.catVideos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+.catVideoPreview{position:relative;display:block;overflow:hidden;border-radius:14px;aspect-ratio:16/9;background:#1d2928}
+.catVideoPreview img{width:100%;height:100%;object-fit:cover;display:block;opacity:.82}
+.catVideoPreview span{position:absolute;left:10px;right:10px;bottom:9px;color:white;font-size:11px;font-weight:800;text-shadow:0 1px 4px #000;background:#0b3538a6;border-radius:20px;padding:6px 9px;text-align:center}
+@media(max-width:760px){.catVideos{gap:8px}}
