@@ -124,6 +124,15 @@ if (page === "cyrus" || page === "kian") {
       adoptPanel.querySelectorAll("li").forEach(li => {
         li.textContent = li.textContent.replace(new RegExp(catName + " and " + otherName, "gi"), catName);
       });
+      let visitNote = adoptPanel.querySelector("p.muted");
+      if (!visitNote) {
+        visitNote = document.createElement("p");
+        visitNote.className = "muted";
+        const steps = adoptPanel.querySelector("ol");
+        if (steps) steps.after(visitNote);
+        else adoptPanel.appendChild(visitNote);
+      }
+      visitNote.textContent = "You can arrange an in-person meet-and-greet or come visit us at one of our weekend adoption event locations.";
       const btn = adoptPanel.querySelector("a.btn");
       if (btn) {
         btn.textContent = "Interested in adopting " + catName + "?";
