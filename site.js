@@ -26,6 +26,16 @@ document.querySelectorAll(".catThumb").forEach((thumb)=>thumb.addEventListener("
 
 
 /* Individual cat profile layout refinements */
+
+if (page === "adopt") {
+  const cyrusCard = document.querySelector('.catCard[href="cyrus.html"] img');
+  if (cyrusCard) {
+    cyrusCard.addEventListener("error", function retryCardPhoto() {
+      cyrusCard.removeEventListener("error", retryCardPhoto);
+      cyrusCard.src = "https://dbw3zep4prcju.cloudfront.net/animal/df8ae764-a6cd-4113-9e02-4df386b86e8f/image/7868a75e-3e46-405e-b9a0-2435a7d1bdc8.jpg";
+    });
+  }
+}
 if (page === "cyrus" || page === "kian") {
   const catName = page === "cyrus" ? "Cyrus" : "Kian";
   const otherName = page === "cyrus" ? "Kian" : "Cyrus";
@@ -57,7 +67,7 @@ if (page === "cyrus" || page === "kian") {
       '" target="_blank" rel="noopener">View ' + catName + ' on Petfinder</a>';
     const oldAdopt = intro.querySelector("a.btn");
     if (oldAdopt) oldAdopt.remove();
-    intro.prepend(actionRow);
+    quick.after(actionRow);
     const pair = intro.querySelector(".pairNotice");
     if (pair) {
       pair.classList.add("pairPanel");
@@ -66,7 +76,9 @@ if (page === "cyrus" || page === "kian") {
         catName + ' & ' + otherName + '</h2>' +
         '<p>' + catName + ' and ' + otherName +
         ' are a bonded pair and are looking for a home together.</p>';
-      sections.appendChild(pair);
+      const adoptSection = sections.querySelector('.adoptPanel');
+      if (adoptSection) sections.insertBefore(pair, adoptSection);
+      else sections.appendChild(pair);
     }
     intro.querySelectorAll(".videoNote").forEach(el => el.remove());
     sections.querySelectorAll(".panel").forEach(panel => {
