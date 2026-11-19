@@ -43,3 +43,49 @@
  .careGrid{grid-template-columns:1fr 1fr}
  .catThumb img{height:78px}
 }
+
+
+/* Simplified, balanced adoptable-cat profiles */
+.catProfile{grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:38px;align-items:center}
+.catIntro{padding:12px 4px}
+.profileHeading{margin:0 0 22px;text-align:left}
+.profileHeading h1{font-size:clamp(48px,6vw,76px);line-height:.98;letter-spacing:-.055em;margin:0}
+.catQuick{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 18px}
+.catQuick>div{padding:14px 16px;background:#fff;border:1px solid var(--line);border-radius:16px;min-height:72px}
+.catQuick small{display:block;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.catQuick strong{font-size:15px}
+.profileActions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 4px}
+.profileActions .btn{min-height:52px;text-align:center;justify-content:center;padding:12px 15px}
+.catSections{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch}
+.catSections>.panel{height:100%;padding:28px}
+.catSections>.bioPanel,.catSections>.pairPanel,.catSections>.adoptPanel{grid-column:1/-1}
+.catSections>.bioPanel{min-height:180px}
+.catSections>.panel h2{font-size:28px}
+.pairPanel{background:linear-gradient(110deg,#fff0f6,#edf9f7);border:1px solid #f0dbe4;padding:32px!important;min-height:170px}
+.pairPanel h2{font-size:32px!important;margin:4px 0 10px}
+.pairPanel p{font-size:16px;max-width:780px;margin:0}
+.compatNote{font-size:12px;line-height:1.55;color:var(--muted);margin:16px 0 0;padding:12px 14px;background:#f7f7f4;border-radius:12px}
+.careGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.careItem{min-height:58px;border-radius:15px;padding:12px}
+.careTone0{background:#fff0f6;border-color:#ffd6e5}
+.careTone0 span{background:#ff4993;color:white}
+.careTone1{background:#eaf8f6;border-color:#ccece7}
+.careTone1 span{background:#0b8b8e;color:white}
+.allPetfinderCta{display:flex;justify-content:center;padding:10px 20px 42px}
+.allPetfinderCta .btn{font-size:14px;padding:12px 18px}
+.catGrid .catCard img{height:270px;object-fit:cover}
+.catCardText{padding:14px 18px}
+.catCardText h3{margin:0}
+@media(max-width:760px){
+ .catProfile{grid-template-columns:1fr;gap:20px}
+ .catHeroImg{height:340px}
+ .profileHeading h1{font-size:54px}
+ .catSections{grid-template-columns:1fr;gap:15px}
+ .catSections>.bioPanel,.catSections>.pairPanel,.catSections>.adoptPanel{grid-column:auto}
+ .catSections>.panel{padding:23px}
+ .pairPanel h2{font-size:27px!important}
+ .profileActions{grid-template-columns:1fr 1fr;gap:8px}
+ .profileActions .btn{font-size:12px;padding:11px 9px}
+ .catQuick>div{padding:12px}
+ .catQuick strong{font-size:14px}
+}
