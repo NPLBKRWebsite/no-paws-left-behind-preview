@@ -1111,7 +1111,7 @@ const importedPetProfiles =[
       "https://dbw3zep4prcju.cloudfront.net/animal/86e1459c-e610-4f0c-be97-b34c68d1c035/image/d4c80ddc-1022-45b1-83fa-3be15559094f.jpg?versionId=TkmTR6M4hkI18UmIQrs6ULY4iNvKDCZK"
     ],
     "bio": "Libby is a kitten full of life and ready to explore every corner of her new home. She loves playing with toys, chasing shadows, and sharing cuddles. Her days are full of fun and goofy antics, and she is gentle and sweet, making her a lovely companion for cozy nights and everyday adventures.",
-    "shyNote": "Libby is described as gentle, playful, and affectionate. She enjoys cuddles and would love a home ready for her fun-loving personality."
+
   },
   {
     "name": "Lucky",
