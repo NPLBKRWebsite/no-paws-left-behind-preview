@@ -171,10 +171,10 @@ body.lightboxOpen{overflow:hidden}
 .bondedPanel .eyebrow a{color:#0b8b8e;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;font-weight:900}
 .compatDisclaimer{font-size:13px;line-height:1.6;color:var(--muted);margin:16px 0 0;padding:13px 15px;background:#f6f8f7;border-left:3px solid #0b8b8e;border-radius:0 12px 12px 0}
 
-/* Matching heart detail on both bonded-pair and general adoption-policy cards. */
-.bondedPanel{position:relative;overflow:hidden}
-.bondedPanel:before{content:"♡";position:absolute;right:20px;top:8px;font-size:46px;color:#ff499344;font-weight:800;pointer-events:none}
-.bondedPanel .eyebrow,.bondedPanel p{position:relative;z-index:1}
+/* Matching heart detail for bonded-pair and sibling-pair panels. */
+.bondedPanel,.siblingPanel{position:relative;overflow:hidden}
+.bondedPanel:before,.siblingPanel:before{content:"♡";position:absolute;right:20px;top:8px;font-size:46px;color:#ff499344;font-weight:800;pointer-events:none}
+.bondedPanel .eyebrow,.bondedPanel p,.siblingPanel .eyebrow,.siblingPanel p{position:relative;z-index:1}
 
 
 /* Keep the bonded-pair story first, then clearly separate the rescue policy and matching-help note. */
