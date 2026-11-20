@@ -1063,7 +1063,7 @@ const importedPetProfiles =[
     "pairingNote": "Leonardo is Donatello's brother. Leonardo, Michelangelo, and Donatello should be considered together."
   },
   {
-    "name": "Michelangelo",
+    "name": "MichelAngelo",
     "slug": "michelangelo",
     "id": "aa4c0fe6-dab9-4350-8ff9-ef3603e9b181",
     "url": "https://www.petfinder.com/cat/michael-angelo-aa4c0fe6-dab9-4350-8ff9-ef3603e9b181/ca/oakley/no-paws-left-behind-kitty-rescue-ca3018/details/",
@@ -1084,11 +1084,11 @@ const importedPetProfiles =[
       "https://dbw3zep4prcju.cloudfront.net/animal/aa4c0fe6-dab9-4350-8ff9-ef3603e9b181/image/d92f893c-03a6-4dc6-8f4e-1670d75afcec.jpg?versionId=IqWL5SreB7o.3zb1w3hv0uiDcm6hWW4a"
     ],
     "careKnown": true,
-    "careItems": [["💙","Neutered"],["🩺","Up to date on vaccinations"],["💛","Special needs: No"],["🐱","Declawed: No"]],
+    "careItems": [["💙","Neutered"],["🩺","Up to date on vaccinations"],["🐛","Dewormed"],["🐾","Flea-treated"],["✨","Microchipped"],["🏡","Fostered & socialized"],["💛","Special needs: No"],["🐱","Declawed: No"]],
     "bio": "This little guy is sweet and energetic. He enjoys playing as well as cuddle time. He has three other brothers who he enjoys playtime and wrestling with. He also has a quiet side and loves to just curl up and take a nap. He would do best in a home with one of his brothers or another cat around the same age.",
     "requiredPair": true,
-    "pairingNote": "Michelangelo must either be adopted with one of his brothers or go to a home with another cat around the same age. This is a requirement for adoption.",
-    "idealHomeNote": "Michelangelo enjoys the company of other cats. He needs either one of his brothers or another cat around his age in his home. Please contact the rescue with questions about the right match."
+    "pairingNote": "MichelAngelo must either be adopted with one of his brothers or go to a home with another cat around the same age. This is a requirement for adoption.",
+    "shyNote": "MichelAngelo has a quieter side and may take a little longer to warm up in a new home. Give him time to settle in at his own pace."
   },
   {
     "name": "Libby",
