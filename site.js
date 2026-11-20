@@ -1067,25 +1067,28 @@ const importedPetProfiles =[
     "slug": "michelangelo",
     "id": "aa4c0fe6-dab9-4350-8ff9-ef3603e9b181",
     "url": "https://www.petfinder.com/cat/michael-angelo-aa4c0fe6-dab9-4350-8ff9-ef3603e9b181/ca/oakley/no-paws-left-behind-kitty-rescue-ca3018/details/",
-    "gender": "",
-    "age": "",
-    "size": "",
-    "breed": "",
-    "coat": "",
-    "kids": "Unknown",
+    "gender": "Male",
+    "age": "Kitten · under 1 year",
+    "size": "Medium · 7–11 lbs",
+    "breed": "Domestic Long Hair",
+    "coat": "Long",
+    "color": "Orange & White",
+    "kids": "Yes",
     "dogs": "Unknown",
-    "cats": "Unknown",
+    "cats": "Yes",
     "other": "Unknown",
-    "fee": null,
+    "fee": 200,
     "photos": [
-      "https://dbw3zep4prcju.cloudfront.net/animal/aa4c0fe6-dab9-4350-8ff9-ef3603e9b181/image/d92f893c-03a6-4dc6-8f4e-1670d75afcec.jpg",
-      "https://dbw3zep4prcju.cloudfront.net/animal/aa4c0fe6-dab9-4350-8ff9-ef3603e9b181/image/8e46d06e-0ea2-4122-8aa6-b0a5490b25e2.jpg",
-      "https://dbw3zep4prcju.cloudfront.net/animal/aa4c0fe6-dab9-4350-8ff9-ef3603e9b181/image/0b9735f1-d933-4882-9893-c8e260570eb3.jpg"
+      "https://dbw3zep4prcju.cloudfront.net/animal/aa4c0fe6-dab9-4350-8ff9-ef3603e9b181/image/0b9735f1-d933-4882-9893-c8e260570eb3.jpg?versionId=BLppboYcO7VbTokmrECxbIjiRVCP68Ry",
+      "https://dbw3zep4prcju.cloudfront.net/animal/aa4c0fe6-dab9-4350-8ff9-ef3603e9b181/image/8e46d06e-0ea2-4122-8aa6-b0a5490b25e2.jpg?versionId=jsgRynJVCbYeI4C19HUrW7dNF.l5adz1",
+      "https://dbw3zep4prcju.cloudfront.net/animal/aa4c0fe6-dab9-4350-8ff9-ef3603e9b181/image/d92f893c-03a6-4dc6-8f4e-1670d75afcec.jpg?versionId=IqWL5SreB7o.3zb1w3hv0uiDcm6hWW4a"
     ],
-    "careKnown": false,
-    "bio": "Michelangelo is Donatello's brother. The three brothers—Donatello, Leonardo, and Michelangelo—should be considered together. His full personality details and photos are being added.",
-    "siblingPair": true,
-    "pairingNote": "Michelangelo is Donatello's brother. Michelangelo, Leonardo, and Donatello should be considered together."
+    "careKnown": true,
+    "careItems": [["💙","Neutered"],["🩺","Up to date on vaccinations"],["💛","Special needs: No"],["🐱","Declawed: No"]],
+    "bio": "This little guy is sweet and energetic. He enjoys playing as well as cuddle time. He has three other brothers who he enjoys playtime and wrestling with. He also has a quiet side and loves to just curl up and take a nap. He would do best in a home with one of his brothers or another cat around the same age.",
+    "requiredPair": true,
+    "pairingNote": "Michelangelo must either be adopted with one of his brothers or go to a home with another cat around the same age. This is a requirement for adoption.",
+    "idealHomeNote": "Michelangelo enjoys the company of other cats. He needs either one of his brothers or another cat around his age in his home. Please contact the rescue with questions about the right match."
   },
   {
     "name": "Libby",
@@ -1281,7 +1284,7 @@ function getBondedPairDescription(pet){
 }
 function renderImportedPet(pet){
   const photos=pet.photos.map((src,i)=>'<button class="catThumb '+(i===0?'active':'')+'" type="button" data-index="'+i+'" data-image="'+src+'"><img class="'+(i===pet.rotatedPhotoIndex?'rotatedPetPhoto':'')+'" src="'+src+'" alt="'+pet.name+' photo '+(i+1)+'" loading="lazy"></button>').join("");
-  const careItems=pet.careKnown===false?[["ℹ️","See Petfinder for current care details"]]:[[pet.gender==="Female"?"💗":"💙",pet.gender==="Female"?"Spayed":"Neutered"],["🩺","Up to date on vaccinations"],["🐛","Dewormed"],["🐾","Flea-treated"],["✨","Microchipped"],["🏡","Foster-socialized"],["💛","Special needs: No"],["🐱","Declawed: No"]];
+  const careItems=pet.careItems||(pet.careKnown===false?[["ℹ️","See Petfinder for current care details"]]:[[pet.gender==="Female"?"💗":"💙",pet.gender==="Female"?"Spayed":"Neutered"],["🩺","Up to date on vaccinations"],["🐛","Dewormed"],["🐾","Flea-treated"],["✨","Microchipped"],["🏡","Foster-socialized"],["💛","Special needs: No"],["🐱","Declawed: No"]]);
   const shyNote=pet.shyNote||"";
   const pairingNote=pet.pairingNote||"";
   const quickFacts=[["Age",pet.age],["Gender",pet.gender],["Adoption fee",pet.fee!=null?"$"+pet.fee:""],["Breed",pet.breed]].filter(([label,value])=>value!==""&&value!=null).map(([label,value])=>'<div><small>'+label+'</small><strong>'+value+'</strong></div>').join("");
@@ -1290,10 +1293,11 @@ function renderImportedPet(pet){
   const policyQuestion="Wondering who this kitten lives with or which kittens might make a good match? Please reach out to us! We're happy to help you learn about our kittens' personalities and preferred pairings so we can find the right match for your home.";
   const hasBondedPair=!!pet.bondedTo||!!(pet.bond&&/\b(?:is|are)\s+bonded\s+(?:to|with)\b/i.test(pet.bond));
   const hasSiblingPair=!!pet.siblingPair;
-  const pairHeading=pet.duoNote?'<div class="eyebrow">Meet the Duo</div>':hasBondedPair?'<div class="eyebrow">Bonded Pair'+(pet.bondedTo?': <a href="'+pet.bondedTo.url+'" target="'+(pet.bondedTo.url.startsWith("http")?"_blank":"_self")+'" rel="noopener">'+pet.bondedTo.name+'</a>':'')+'</div>':hasSiblingPair?'<div class="eyebrow">Sibling Pair</div>':'<div class="eyebrow">Adoption Policy</div>';
-  const pairBody=pet.duoNote?'<p>'+pet.duoNote+'</p>':hasBondedPair?(pet.bondedTo?'<p>'+pet.name+' and '+pet.bondedTo.name+' are a bonded pair looking for a home together.</p><p>'+getBondedPairDescription(pet)+'</p>':'<p>'+pet.bond.split(/Per our adoption policy/i)[0].trim()+'</p>'):hasSiblingPair?'<p>'+(pairingNote||'This kitten must be adopted with a sibling under our five-month adoption policy.')+'</p>':'<p>'+policyText+'</p>';
-  const policySection=(hasBondedPair||hasSiblingPair)?'<div class="policyDivider"><div class="eyebrow">Adoption Policy</div><p>'+policyText+'</p></div>':'';
-  return '<section class="section catTop"><div class="wrap"><div class="catProfile"><div><div class="catGallery">'+(pet.photos.length?'<img class="catHeroImg" src="'+pet.photos[0]+'" alt="'+pet.name+'">':'<div class="catPhotoPlaceholder" role="img" aria-label="'+pet.name+' photo coming soon" style="min-height:320px;aspect-ratio:4/3;display:grid;place-items:center;background:#f8edf2;color:#ff4993;font-size:56px;border-radius:18px">♡</div>')+'<div class="catThumbs">'+photos+'</div></div></div><div class="catIntro"><div class="catTitle profileHeading"><h1>'+pet.name+'</h1></div><div class="catQuick">'+quickFacts+'</div><div class="profileActions"><a class="btn pink" href="mailto:contact@nopawsleftbehindkittyrescue.com?subject='+encodeURIComponent('Interested in adopting '+pet.name)+'">Interested in adopting '+pet.name+'?</a>'+(pet.url?'<a class="btn teal" href="'+pet.url+'" target="_blank" rel="noopener">View '+pet.name+' on Petfinder</a>':'')+'</div><div class="pairPanel '+(hasBondedPair?'bondedPanel':hasSiblingPair?'siblingPanel':'adoptionPolicyPanel')+'">'+pairHeading+pairBody+(pairingNote?'<p class="policyQuestion">'+pairingNote+'</p>':'')+policySection+(hasBondedPair||hasSiblingPair||pairingNote?'':'<p class="policyQuestion">'+policyQuestion+'</p>')+'</div></div></div></div></section><section class="section soft"><div class="wrap catSections"><article class="panel bioPanel"><div class="eyebrow">Get to know '+pet.name+'</div><h2>About '+pet.name+'</h2><p>'+pet.bio+'</p></article><article class="panel"><div class="eyebrow">Wellness</div><h2>Health & Care</h2><div class="careGrid">'+careItems.map((x,i)=>'<div class="careItem careTone'+(i%2)+'"><span>'+x[0]+'</span><strong>'+x[1]+'</strong></div>').join("")+'</div></article><article class="panel"><div class="eyebrow">A thoughtful match</div><h2>Ideal Home</h2><div class="compatGrid"><div><span>Children</span><strong>'+pet.kids+'</strong></div><div><span>Dogs</span><strong>'+pet.dogs+'</strong></div><div><span>Other cats</span><strong>'+pet.cats+'</strong></div><div><span>Other animals</span><strong>'+pet.other+'</strong></div></div>'+(shyNote?'<p class="compatNote">'+shyNote+'</p>':'')+(pet.idealHomeNote?'<p class="compatNote">'+pet.idealHomeNote+'</p>':'')+'<p class="compatDisclaimer">'+compatibilityNote+'</p></article><article class="panel adoptPanel"><div class="eyebrow">Next steps</div><h2>How to Adopt</h2><ol class="list"><li>Send an inquiry and mention '+pet.name+'.</li><li>Complete the adoption application provided by the rescue.</li><li>Once approved, arrange an in-person meet-and-greet.</li></ol><p class="muted">You can arrange an in-person meet-and-greet or come visit us at one of our weekend adoption event locations.</p><a class="btn pink" href="mailto:contact@nopawsleftbehindkittyrescue.com?subject='+encodeURIComponent('Interested in adopting '+pet.name)+'">Interested in adopting '+pet.name+'?</a></article></div></section><section class="section"><div class="wrap center"><a class="btn light" style="border:1px solid var(--line)" href="adopt.html">← Back to all adoptable cats</a></div></section>';
+  const hasRequiredPair=!!pet.requiredPair;
+  const pairHeading=pet.duoNote?'<div class="eyebrow">Meet the Duo</div>':hasBondedPair?'<div class="eyebrow">Bonded Pair'+(pet.bondedTo?': <a href="'+pet.bondedTo.url+'" target="'+(pet.bondedTo.url.startsWith("http")?"_blank":"_self")+'" rel="noopener">'+pet.bondedTo.name+'</a>':'')+'</div>':hasRequiredPair?'<div class="eyebrow">Required Pair</div>':hasSiblingPair?'<div class="eyebrow">Sibling Pair</div>':'<div class="eyebrow">Adoption Policy</div>';
+  const pairBody=pet.duoNote?'<p>'+pet.duoNote+'</p>':hasBondedPair?(pet.bondedTo?'<p>'+pet.name+' and '+pet.bondedTo.name+' are a bonded pair looking for a home together.</p><p>'+getBondedPairDescription(pet)+'</p>':'<p>'+pet.bond.split(/Per our adoption policy/i)[0].trim()+'</p>'):hasRequiredPair?'<p>'+(pairingNote||pet.name+' must be adopted with a suitable companion.')+'</p>':hasSiblingPair?'<p>'+(pairingNote||'This kitten must be adopted with a sibling under our five-month adoption policy.')+'</p>':'<p>'+policyText+'</p>';
+  const policySection=(hasBondedPair||hasSiblingPair||hasRequiredPair)?'<div class="policyDivider"><div class="eyebrow">Adoption Policy</div><p>'+policyText+'</p></div>':'';
+  return '<section class="section catTop"><div class="wrap"><div class="catProfile"><div><div class="catGallery">'+(pet.photos.length?'<img class="catHeroImg" src="'+pet.photos[0]+'" alt="'+pet.name+'">':'<div class="catPhotoPlaceholder" role="img" aria-label="'+pet.name+' photo coming soon" style="min-height:320px;aspect-ratio:4/3;display:grid;place-items:center;background:#f8edf2;color:#ff4993;font-size:56px;border-radius:18px">♡</div>')+'<div class="catThumbs">'+photos+'</div></div></div><div class="catIntro"><div class="catTitle profileHeading"><h1>'+pet.name+'</h1></div><div class="catQuick">'+quickFacts+'</div><div class="profileActions"><a class="btn pink" href="mailto:contact@nopawsleftbehindkittyrescue.com?subject='+encodeURIComponent('Interested in adopting '+pet.name)+'">Interested in adopting '+pet.name+'?</a>'+(pet.url?'<a class="btn teal" href="'+pet.url+'" target="_blank" rel="noopener">View '+pet.name+' on Petfinder</a>':'')+'</div><div class="pairPanel '+(hasBondedPair?'bondedPanel':(hasSiblingPair||hasRequiredPair)?'siblingPanel':'adoptionPolicyPanel')+'">'+pairHeading+pairBody+(pairingNote&&!hasRequiredPair?'<p class="policyQuestion">'+pairingNote+'</p>':'')+policySection+(hasBondedPair||hasSiblingPair||pairingNote?'':'<p class="policyQuestion">'+policyQuestion+'</p>')+'</div></div></div></div></section><section class="section soft"><div class="wrap catSections"><article class="panel bioPanel"><div class="eyebrow">Get to know '+pet.name+'</div><h2>About '+pet.name+'</h2><p>'+pet.bio+'</p></article><article class="panel"><div class="eyebrow">Wellness</div><h2>Health & Care</h2><div class="careGrid">'+careItems.map((x,i)=>'<div class="careItem careTone'+(i%2)+'"><span>'+x[0]+'</span><strong>'+x[1]+'</strong></div>').join("")+'</div></article><article class="panel"><div class="eyebrow">A thoughtful match</div><h2>Ideal Home</h2><div class="compatGrid"><div><span>Children</span><strong>'+pet.kids+'</strong></div><div><span>Dogs</span><strong>'+pet.dogs+'</strong></div><div><span>Other cats</span><strong>'+pet.cats+'</strong></div><div><span>Other animals</span><strong>'+pet.other+'</strong></div></div>'+(shyNote?'<p class="compatNote">'+shyNote+'</p>':'')+(pet.idealHomeNote?'<p class="compatNote">'+pet.idealHomeNote+'</p>':'')+'<p class="compatDisclaimer">'+compatibilityNote+'</p></article><article class="panel adoptPanel"><div class="eyebrow">Next steps</div><h2>How to Adopt</h2><ol class="list"><li>Send an inquiry and mention '+pet.name+'.</li><li>Complete the adoption application provided by the rescue.</li><li>Once approved, arrange an in-person meet-and-greet.</li></ol><p class="muted">You can arrange an in-person meet-and-greet or come visit us at one of our weekend adoption event locations.</p><a class="btn pink" href="mailto:contact@nopawsleftbehindkittyrescue.com?subject='+encodeURIComponent('Interested in adopting '+pet.name)+'">Interested in adopting '+pet.name+'?</a></article></div></section><section class="section"><div class="wrap center"><a class="btn light" style="border:1px solid var(--line)" href="adopt.html">← Back to all adoptable cats</a></div></section>';
 }
 if(page==="adopt"){
   const grid=document.querySelector(".catGrid");
