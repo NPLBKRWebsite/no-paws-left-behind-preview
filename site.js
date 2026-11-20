@@ -1042,25 +1042,28 @@ const importedPetProfiles =[
   {
     "name": "Leonardo",
     "slug": "leonardo",
-    "id": "",
-    "url": "",
-    "gender": "",
-    "age": "",
-    "size": "",
-    "breed": "",
-    "coat": "",
+    "id": "bc634567-d04e-4cf2-aef6-6ad73c520076",
+    "url": "https://www.petfinder.com/cat/leonardo-bc634567-d04e-4cf2-aef6-6ad73c520076/ca/oakley/no-paws-left-behind-kitty-rescue-ca3018/details/",
+    "gender": "Male",
+    "age": "Kitten · under 1 year",
+    "size": "Medium · 7–11 lbs",
+    "breed": "Domestic Long Hair",
+    "coat": "Long",
+    "color": "Black & White",
     "kids": "Unknown",
     "dogs": "Unknown",
-    "cats": "Unknown",
+    "cats": "Yes",
     "other": "Unknown",
-    "fee": null,
+    "fee": 200,
     "photos": [
-      "https://d308toqq2zpasi.cloudfront.net/images/pet_listings/cat/7/ae/00/id_18004916/b56a5a/domestic-long-hair-cat-for-adoption_medium.jpeg"
+      "https://dbw3zep4prcju.cloudfront.net/animal/bc634567-d04e-4cf2-aef6-6ad73c520076/image/389931a6-9f50-40e3-90ea-e9e4f083f32c.jpg?versionId=a6do7yTAVm3NZLrSz9OFO9j1kY3iyszN",
+      "https://dbw3zep4prcju.cloudfront.net/animal/bc634567-d04e-4cf2-aef6-6ad73c520076/image/45cd7db4-378e-4fe7-900e-c8918a03664e.jpg?versionId=3PcVUp_2sCHtfp68v_UESh6p0Up7RI_q"
     ],
-    "careKnown": false,
-    "bio": "Leonardo is Donatello's brother. The three brothers—Donatello, Leonardo, and MichaelAngelo—should be considered together. His full personality details and photos are being added.",
+    "careKnown": true,
+    "careItems": [["💙","Neutered"],["🩺","Vaccinated"],["💛","Special needs: No"],["🐱","Declawed: No"]],
+    "bio": "Meet Leonardo, a playful, energetic boy who absolutely loves people of all kinds. He has so much energy that he and his brother Donatello are nonstop when they are awake. If you want a pair of kittens to enjoy and watch for entertainment, these two are for you.",
     "siblingPair": true,
-    "pairingNote": "Leonardo is Donatello's brother. Leonardo, MichaelAngelo, and Donatello should be considered together."
+    "pairingNote": "Leonardo must be adopted with his brother Donatello. They are a playful, energetic pair who love people and keep each other busy. Per the rescue's policy, kittens five months and younger must be adopted in pairs."
   },
   {
     "name": "MichaelAngelo",
