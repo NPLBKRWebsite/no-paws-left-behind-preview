@@ -1035,8 +1035,8 @@ const importedPetProfiles =[
       "https://dbw3zep4prcju.cloudfront.net/animal/dae73616-24cd-4d30-a501-df27c247324b/image/36d9276a-670d-4242-b9a6-9a9265dc5593.jpg?versionId=i22.F0zrB2Yb3.ctqyPX8T4HcEn0U61E",
       "https://dbw3zep4prcju.cloudfront.net/animal/dae73616-24cd-4d30-a501-df27c247324b/image/d34ef851-fdba-4a98-bc57-93a4824d0a7e.jpg?versionId=jdnaah3iVC61FgW_3JQlGnR9uUyMQt9m"
     ],
-    "bio": "Donatello is a very active and brave little boy kitten. He and his brothers have so much energy that they will keep you entertained for hours. Donatello absolutely loves wrestling with his brother Leonardo. Their rescue feels they must go together. He also has another brother, Michelangelo, who is a bit more easygoing.",
-    "pairingNote": "Donatello's brothers are Leonardo and Michelangelo. The three brothers should be considered together.",
+    "bio": "Donatello is a very active and brave little boy kitten. He and his brothers have so much energy that they will keep you entertained for hours. Donatello absolutely loves wrestling with his brother Leonardo. Their rescue feels they must go together. He also has another brother, MichaelAngelo, who is a bit more easygoing.",
+    "pairingNote": "Donatello's brothers are Leonardo and MichaelAngelo. The three brothers should be considered together.",
     "siblingPair": true
   },
   {
@@ -1058,12 +1058,12 @@ const importedPetProfiles =[
       "https://d308toqq2zpasi.cloudfront.net/images/pet_listings/cat/7/ae/00/id_18004916/b56a5a/domestic-long-hair-cat-for-adoption_medium.jpeg"
     ],
     "careKnown": false,
-    "bio": "Leonardo is Donatello's brother. The three brothers—Donatello, Leonardo, and Michelangelo—should be considered together. His full personality details and photos are being added.",
+    "bio": "Leonardo is Donatello's brother. The three brothers—Donatello, Leonardo, and MichaelAngelo—should be considered together. His full personality details and photos are being added.",
     "siblingPair": true,
-    "pairingNote": "Leonardo is Donatello's brother. Leonardo, Michelangelo, and Donatello should be considered together."
+    "pairingNote": "Leonardo is Donatello's brother. Leonardo, MichaelAngelo, and Donatello should be considered together."
   },
   {
-    "name": "MichelAngelo",
+    "name": "MichaelAngelo",
     "slug": "michelangelo",
     "id": "aa4c0fe6-dab9-4350-8ff9-ef3603e9b181",
     "url": "https://www.petfinder.com/cat/michael-angelo-aa4c0fe6-dab9-4350-8ff9-ef3603e9b181/ca/oakley/no-paws-left-behind-kitty-rescue-ca3018/details/",
@@ -1087,8 +1087,8 @@ const importedPetProfiles =[
     "careItems": [["💙","Neutered"],["🩺","Up to date on vaccinations"],["🐛","Dewormed"],["🐾","Flea-treated"],["✨","Microchipped"],["🏡","Fostered & socialized"],["💛","Special needs: No"],["🐱","Declawed: No"]],
     "bio": "This little guy is sweet and energetic. He enjoys playing as well as cuddle time. He has three other brothers who he enjoys playtime and wrestling with. He also has a quiet side and loves to just curl up and take a nap. He would do best in a home with one of his brothers or another cat around the same age.",
     "requiredPair": true,
-    "pairingNote": "MichelAngelo must either be adopted with one of his brothers or go to a home with another cat around the same age. This is a requirement for adoption.",
-    "shyNote": "MichelAngelo has a quieter side and may take a little longer to warm up in a new home. Give him time to settle in at his own pace."
+    "pairingNote": "MichaelAngelo must either be adopted with one of his brothers or go to a home with another cat around the same age. This is a requirement for adoption.",
+    "shyNote": "MichaelAngelo has a quieter side and may take a little longer to warm up in a new home. Give him time to settle in at his own pace."
   },
   {
     "name": "Libby",
