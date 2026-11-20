@@ -1065,8 +1065,8 @@ const importedPetProfiles =[
   {
     "name": "Michelangelo",
     "slug": "michelangelo",
-    "id": "",
-    "url": "",
+    "id": "aa4c0fe6-dab9-4350-8ff9-ef3603e9b181",
+    "url": "https://www.petfinder.com/cat/michael-angelo-aa4c0fe6-dab9-4350-8ff9-ef3603e9b181/ca/oakley/no-paws-left-behind-kitty-rescue-ca3018/details/",
     "gender": "",
     "age": "",
     "size": "",
@@ -1078,7 +1078,9 @@ const importedPetProfiles =[
     "other": "Unknown",
     "fee": null,
     "photos": [
-      "https://d308toqq2zpasi.cloudfront.net/images/pet_listings/cat/4/eb/f9/id_18004928/96399e/domestic-long-hair-cat-for-adoption_medium.jpeg"
+      "https://dbw3zep4prcju.cloudfront.net/animal/aa4c0fe6-dab9-4350-8ff9-ef3603e9b181/image/d92f893c-03a6-4dc6-8f4e-1670d75afcec.jpg",
+      "https://dbw3zep4prcju.cloudfront.net/animal/aa4c0fe6-dab9-4350-8ff9-ef3603e9b181/image/8e46d06e-0ea2-4122-8aa6-b0a5490b25e2.jpg",
+      "https://dbw3zep4prcju.cloudfront.net/animal/aa4c0fe6-dab9-4350-8ff9-ef3603e9b181/image/0b9735f1-d933-4882-9893-c8e260570eb3.jpg"
     ],
     "careKnown": false,
     "bio": "Michelangelo is Donatello's brother. The three brothers—Donatello, Leonardo, and Michelangelo—should be considered together. His full personality details and photos are being added.",
