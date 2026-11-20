@@ -660,7 +660,67 @@ const importedPetProfiles =[
       "https://dbw3zep4prcju.cloudfront.net/animal/704112bd-2c99-4671-a3cf-1d8d4ba9418c/image/faa04a3f-991b-40b5-83b7-03839f9874a8.jpg?versionId=jqnVLoMDDa4S9x5J56F5pOjhx_f_pscs"
     ],
     "bio": "Zenon loves playing with his siblings and chasing toys. He enjoys head pets and will rub against your leg for attention. He also loves cuddling with his brother and the other cats in the home.",
-    "shyNote": "Zenon may be a little shy at first, but he quickly comes around."
+    "shyNote": "Zenon may be a little shy at first, but he quickly comes around.",
+    "siblingPair": true,
+    "preferredPair": {
+      "name": "Zinc",
+      "url": "zinc.html"
+    },
+    "preferredPairRelation": "brother",
+    "pairingPlayNote": "Zenon loves playing with his siblings and chasing toys. He enjoys head pets, attention, and cuddling with his brother and the other cats in the home."
+  },
+  {
+    "name": "Zinc",
+    "slug": "zinc",
+    "id": "9835905a-8b6b-48a0-bd00-1c2c47f0bc60",
+    "url": "https://www.petfinder.com/cat/zinc-9835905a-8b6b-48a0-bd00-1c2c47f0bc60/ca/oakley/no-paws-left-behind-kitty-rescue-ca3018/details/",
+    "gender": "Male",
+    "age": "Kitten · under 1 year",
+    "size": "Medium · 7–11 lbs",
+    "breed": "Domestic Short Hair",
+    "coat": "Short",
+    "kids": "Yes",
+    "dogs": "Yes",
+    "cats": "Yes",
+    "other": "Unknown",
+    "fee": 200,
+    "photos": [
+      "https://dbw3zep4prcju.cloudfront.net/animal/9835905a-8b6b-48a0-bd00-1c2c47f0bc60/image/36633f8f-b33b-43c7-af50-0e1a75004f85.jpg?versionId=uAaTEo5XamMWFH05ea00yZubIn0phQZn",
+      "https://dbw3zep4prcju.cloudfront.net/animal/9835905a-8b6b-48a0-bd00-1c2c47f0bc60/image/7249af83-e460-43ed-96ca-d2a8c5ce622f.jpg?versionId=FORpqHiS5jAf5l8cBGGizxfd4XwwQjXR",
+      "https://dbw3zep4prcju.cloudfront.net/animal/9835905a-8b6b-48a0-bd00-1c2c47f0bc60/image/5146a0fa-d6c6-4b52-82e7-d6791082d12a.jpg?versionId=SGDS_fUD1oWEPNaFWgnspycjn1q9gfuH",
+      "https://dbw3zep4prcju.cloudfront.net/animal/9835905a-8b6b-48a0-bd00-1c2c47f0bc60/image/8e6b2e19-071e-448f-aa05-409c59ff9ba5.jpg?versionId=e_Gtfr0WDxy.ei6z94x5alfslgpf_aCl",
+      "https://dbw3zep4prcju.cloudfront.net/animal/9835905a-8b6b-48a0-bd00-1c2c47f0bc60/image/af8c0683-7cf7-4384-adfd-0dc7563595e9.jpg?versionId=k3kpP4urFNnONsWxWRZXN9Tgbpb5r_H9"
+    ],
+    "careKnown": true,
+    "bio": "Zinc is an adventurous, playful boy who loves toys that ring a bell and enjoys spending time in the catio with his foster siblings. He is independent and enjoys the company of other cats. He isn't the extra-cuddly type, but he has plenty of playful charm. Zinc has special dietary needs and eats prescription RX food.",
+    "pairingNote": "Zinc and Xenon are being presented together.",
+    "color": "Gray / Blue / Silver",
+    "careItems": [
+      [
+        "💙",
+        "Neutered"
+      ],
+      [
+        "🩺",
+        "Vaccinated"
+      ],
+      [
+        "💛",
+        "Special needs: Yes — prescription RX food"
+      ],
+      [
+        "🐱",
+        "Declawed: No"
+      ]
+    ],
+    "shyNote": "Zinc is independent and not especially cuddly. He enjoys playtime and the company of other cats, rather than being a constant lap cat.",
+    "siblingPair": true,
+    "preferredPair": {
+      "name": "Zenon",
+      "url": "zenon.html"
+    },
+    "preferredPairRelation": "brother",
+    "pairingPlayNote": "Zinc and Zenon are brothers, and Zinc loves playing with his foster siblings."
   },
   {
     "name": "Pom Pom",
@@ -711,46 +771,6 @@ const importedPetProfiles =[
     ],
     "bio": "Stitch is a super energetic kitty who loves to play with her siblings. She may act independent, but secretly loves being held and petted; when picked up, she starts purring. She may need a little time to settle into a new home.",
     "idealHomeNote": "Stitch would do best in a home with another friendly cat."
-  },
-  {
-    "name": "Zinc",
-    "slug": "zinc",
-    "id": "",
-    "url": "",
-    "gender": "",
-    "age": "",
-    "size": "",
-    "breed": "",
-    "coat": "",
-    "kids": "Unknown",
-    "dogs": "Unknown",
-    "cats": "Unknown",
-    "other": "Unknown",
-    "fee": null,
-    "photos": [],
-    "careKnown": false,
-    "bio": "Zinc and Xenon are being presented together. Zinc's full personality details and photos are being added.",
-    "pairingNote": "Zinc and Xenon are being presented together."
-  },
-  {
-    "name": "Xenon",
-    "slug": "xenon",
-    "id": "",
-    "url": "",
-    "gender": "",
-    "age": "",
-    "size": "",
-    "breed": "",
-    "coat": "",
-    "kids": "Unknown",
-    "dogs": "Unknown",
-    "cats": "Unknown",
-    "other": "Unknown",
-    "fee": null,
-    "photos": [],
-    "careKnown": false,
-    "bio": "Zinc and Xenon are being presented together. Xenon's full personality details and photos are being added.",
-    "pairingNote": "Xenon and Zinc are being presented together."
   },
   {
     "name": "Zeek",
@@ -894,26 +914,60 @@ const importedPetProfiles =[
     ],
     "bio": "Hazel is a dilute calico with a little bobtail. She loves running and playing with her sisters. She and her sisters came from outdoor life and are still getting used to being indoors. She is looking for a quiet home where she can feel safe, build trust, and settle in with her family.",
     "shyNote": "Hazel is shy at first and needs time to trust people before warming up. A quiet home and patience will help her adjust.",
-    "pairingNote": "Hazel needs to go home with one of her sisters. She has four sisters to choose from, and Amber is her preferred match now that Autumn has been adopted. If Amber is no longer available, please contact the rescue to find the best available sister for Hazel."
+    "pairingNote": "Hazel needs to go home with one of her sisters. She has four sisters to choose from, and Amber is her preferred match now that Autumn has been adopted. If Amber is no longer available, please contact the rescue to find the best available sister for Hazel.",
+    "siblingPair": true,
+    "preferredPair": {
+      "name": "Amber",
+      "url": "amber.html"
+    },
+    "preferredPairRelation": "sister",
+    "pairingPlayNote": "Hazel is shy at first and needs a quiet home where she can feel safe and build trust. Amber is her preferred sister match now that Autumn has been adopted."
   },
   {
     "name": "Amber",
     "slug": "amber",
-    "id": "",
-    "url": "",
+    "id": "fb62f11b-48e0-4fea-b741-52cd262eb990",
+    "url": "https://www.petfinder.com/cat/amber-fb62f11b-48e0-4fea-b741-52cd262eb990/ca/oakley/no-paws-left-behind-kitty-rescue-ca3018/details/",
     "gender": "Female",
-    "age": "",
-    "size": "",
-    "breed": "",
-    "coat": "",
+    "age": "Kitten · under 1 year",
+    "size": "Medium · 7–11 lbs",
+    "breed": "Tabby",
+    "coat": "Short",
     "kids": "Unknown",
     "dogs": "Unknown",
-    "cats": "Unknown",
+    "cats": "Yes",
     "other": "Unknown",
-    "fee": null,
+    "fee": 200,
     "photos": [],
-    "careKnown": false,
-    "bio": "Amber is Hazel's sister. Her full personality details and photos are being added."
+    "careKnown": true,
+    "bio": "Amber is a rare orange-buff girl tabby with a tiny stubby tail. She came from outdoor life and is still a little shy, but she is learning to feel safe indoors. She will need a patient home that gives her time to adjust; with time, she can become a cuddly companion.",
+    "color": "Buff / Tan / Fawn",
+    "careItems": [
+      [
+        "💗",
+        "Spayed"
+      ],
+      [
+        "🩺",
+        "Vaccinated"
+      ],
+      [
+        "💛",
+        "Special needs: No"
+      ],
+      [
+        "🐱",
+        "Declawed: No"
+      ]
+    ],
+    "shyNote": "Amber is still shy after living outdoors and will need time and patience to settle into a new home.",
+    "siblingPair": true,
+    "preferredPair": {
+      "name": "Hazel",
+      "url": "hazel.html"
+    },
+    "preferredPairRelation": "sister",
+    "pairingPlayNote": "Amber and Hazel are sisters. Amber is still building confidence and will do best with a patient, understanding home."
   },
   {
     "name": "Faith",
@@ -1060,11 +1114,36 @@ const importedPetProfiles =[
       "https://dbw3zep4prcju.cloudfront.net/animal/bc634567-d04e-4cf2-aef6-6ad73c520076/image/45cd7db4-378e-4fe7-900e-c8918a03664e.jpg?versionId=3PcVUp_2sCHtfp68v_UESh6p0Up7RI_q"
     ],
     "careKnown": true,
-    "careItems": [["💙","Neutered"],["🩺","Vaccinated"],["💛","Special needs: No"],["🐱","Declawed: No"]],
+    "careItems": [
+      [
+        "💙",
+        "Neutered"
+      ],
+      [
+        "🩺",
+        "Vaccinated"
+      ],
+      [
+        "💛",
+        "Special needs: No"
+      ],
+      [
+        "🐱",
+        "Declawed: No"
+      ]
+    ],
     "bio": "Meet Leonardo, a playful, energetic boy who absolutely loves people of all kinds. He has so much energy that he and his brother Donatello are nonstop when they are awake. If you want a pair of kittens to enjoy and watch for entertainment, these two are for you.",
     "siblingPair": true,
-    "preferredPair": {"name":"Donatello","url":"donatello.html"},
-    "otherBrothers": [{"name":"MichaelAngelo","url":"michelangelo.html"}],
+    "preferredPair": {
+      "name": "Donatello",
+      "url": "donatello.html"
+    },
+    "otherBrothers": [
+      {
+        "name": "MichaelAngelo",
+        "url": "michelangelo.html"
+      }
+    ],
     "pairingNote": "Leonardo's preferred pair is his brother Donatello. They have so much energy and are nonstop playing together! Leonardo also has another brother, MichaelAngelo."
   },
   {
@@ -1089,10 +1168,52 @@ const importedPetProfiles =[
       "https://dbw3zep4prcju.cloudfront.net/animal/aa4c0fe6-dab9-4350-8ff9-ef3603e9b181/image/d92f893c-03a6-4dc6-8f4e-1670d75afcec.jpg?versionId=IqWL5SreB7o.3zb1w3hv0uiDcm6hWW4a"
     ],
     "careKnown": true,
-    "careItems": [["💙","Neutered"],["🩺","Up to date on vaccinations"],["🐛","Dewormed"],["🐾","Flea-treated"],["✨","Microchipped"],["🏡","Fostered & socialized"],["💛","Special needs: No"],["🐱","Declawed: No"]],
+    "careItems": [
+      [
+        "💙",
+        "Neutered"
+      ],
+      [
+        "🩺",
+        "Up to date on vaccinations"
+      ],
+      [
+        "🐛",
+        "Dewormed"
+      ],
+      [
+        "🐾",
+        "Flea-treated"
+      ],
+      [
+        "✨",
+        "Microchipped"
+      ],
+      [
+        "🏡",
+        "Fostered & socialized"
+      ],
+      [
+        "💛",
+        "Special needs: No"
+      ],
+      [
+        "🐱",
+        "Declawed: No"
+      ]
+    ],
     "bio": "This little guy is sweet and energetic. He enjoys playing as well as cuddle time. He has three other brothers who he enjoys playtime and wrestling with. He also has a quiet side and loves to just curl up and take a nap. He would do best in a home with one of his brothers or another cat around the same age.",
     "requiredPair": true,
-    "requiredPairBrothers": [{"name":"Leonardo","url":"leonardo.html"},{"name":"Donatello","url":"donatello.html"}],
+    "requiredPairBrothers": [
+      {
+        "name": "Leonardo",
+        "url": "leonardo.html"
+      },
+      {
+        "name": "Donatello",
+        "url": "donatello.html"
+      }
+    ],
     "pairingNote": "MichaelAngelo has two brothers, Leonardo and Donatello. He must either be adopted with one of his brothers or go to a home with another cat around the same age. This is a requirement for adoption.",
     "shyNote": "MichaelAngelo has a quieter side and may take a little longer to warm up in a new home. Give him time to settle in at his own pace."
   },
@@ -1116,8 +1237,7 @@ const importedPetProfiles =[
       "https://dbw3zep4prcju.cloudfront.net/animal/86e1459c-e610-4f0c-be97-b34c68d1c035/image/6a499a63-60f2-461c-836e-b48f18502776.jpg?versionId=YLGNk2gM9srm3zLexwq9VNAlTH41sMyB",
       "https://dbw3zep4prcju.cloudfront.net/animal/86e1459c-e610-4f0c-be97-b34c68d1c035/image/d4c80ddc-1022-45b1-83fa-3be15559094f.jpg?versionId=TkmTR6M4hkI18UmIQrs6ULY4iNvKDCZK"
     ],
-    "bio": "Libby is a kitten full of life and ready to explore every corner of her new home. She loves playing with toys, chasing shadows, and sharing cuddles. Her days are full of fun and goofy antics, and she is gentle and sweet, making her a lovely companion for cozy nights and everyday adventures.",
-
+    "bio": "Libby is a kitten full of life and ready to explore every corner of her new home. She loves playing with toys, chasing shadows, and sharing cuddles. Her days are full of fun and goofy antics, and she is gentle and sweet, making her a lovely companion for cozy nights and everyday adventures."
   },
   {
     "name": "Lucky",
@@ -1301,9 +1421,9 @@ function renderImportedPet(pet){
   const hasSiblingPair=!!pet.siblingPair;
   const hasRequiredPair=!!pet.requiredPair;
   const pairHeading=pet.duoNote?'<div class="eyebrow">Meet the Duo</div>':hasBondedPair?'<div class="eyebrow">Bonded Pair'+(pet.bondedTo?': <a href="'+pet.bondedTo.url+'" target="'+(pet.bondedTo.url.startsWith("http")?"_blank":"_self")+'" rel="noopener">'+pet.bondedTo.name+'</a>':'')+'</div>':hasRequiredPair?'<div class="eyebrow">Required Pair</div>':hasSiblingPair?'<div class="eyebrow">Sibling Pair</div>':'<div class="eyebrow">Adoption Policy</div>';
-  const pairBody=pet.duoNote?'<p>'+pet.duoNote+'</p>':(hasSiblingPair&&pet.preferredPair)?'<p>Leonardo\'s preferred pair is his brother <strong><a href="'+pet.preferredPair.url+'">'+pet.preferredPair.name+'</a></strong>.</p><p>They have so much energy and are nonstop playing together! Leonardo also has another brother, <strong><a href="'+pet.otherBrothers[0].url+'">'+pet.otherBrothers[0].name+'</a></strong>.</p>':hasBondedPair?(pet.bondedTo?'<p>'+pet.name+' and '+pet.bondedTo.name+' are a bonded pair looking for a home together.</p><p>'+getBondedPairDescription(pet)+'</p>':'<p>'+pet.bond.split(/Per our adoption policy/i)[0].trim()+'</p>'):hasRequiredPair?'<p>'+(pet.requiredPairBrothers?pet.name+' has two brothers: '+pet.requiredPairBrothers.map(b=>'<strong><a href="'+b.url+'">'+b.name+'</a></strong>').join(' and ')+'. He must either be adopted with one of his brothers or go to a home with another cat around the same age.':(pairingNote||pet.name+' must be adopted with a suitable companion.'))+'</p>':hasSiblingPair?'<p>'+(pairingNote||'This kitten must be adopted with a sibling under our five-month adoption policy.')+'</p>':'<p>'+policyText+'</p>';
+  const pairBody=pet.duoNote?'<p>'+pet.duoNote+'</p>':(hasSiblingPair&&pet.preferredPair)?'<p>'+pet.name+'\\'s preferred sibling match is their '+(pet.preferredPairRelation||'sibling')+' <strong><a href="'+pet.preferredPair.url+'">'+pet.preferredPair.name+'</a></strong>.</p><p>'+(pet.pairingPlayNote||'These siblings enjoy spending time together.')+'</p>'+(pet.otherBrothers||[]).map(b=>'<p>'+pet.name+' also has another sibling, <strong><a href="'+b.url+'">'+b.name+'</a></strong>.</p>').join(''):hasBondedPair?(pet.bondedTo?'<p>'+pet.name+' and '+pet.bondedTo.name+' are a bonded pair looking for a home together.</p><p>'+getBondedPairDescription(pet)+'</p>':'<p>'+pet.bond.split(/Per our adoption policy/i)[0].trim()+'</p>'):hasRequiredPair?'<p>'+(pet.requiredPairBrothers?pet.name+' has two brothers: '+pet.requiredPairBrothers.map(b=>'<strong><a href="'+b.url+'">'+b.name+'</a></strong>').join(' and ')+'. He must either be adopted with one of his brothers or go to a home with another cat around the same age.':(pairingNote||pet.name+' must be adopted with a suitable companion.'))+'</p>':hasSiblingPair?'<p>'+(pairingNote||'This kitten must be adopted with a sibling under our five-month adoption policy.')+'</p>':'<p>'+policyText+'</p>';
   const policySection=(hasBondedPair||hasRequiredPair)?'<div class="policyDivider"><div class="eyebrow">Adoption Policy</div><p>'+policyText+'</p></div>':'';
-  return '<section class="section catTop"><div class="wrap"><div class="catProfile"><div><div class="catGallery">'+(pet.photos.length?'<img class="catHeroImg" src="'+pet.photos[0]+'" alt="'+pet.name+'">':'<div class="catPhotoPlaceholder" role="img" aria-label="'+pet.name+' photo coming soon" style="min-height:320px;aspect-ratio:4/3;display:grid;place-items:center;background:#f8edf2;color:#ff4993;font-size:56px;border-radius:18px">♡</div>')+'<div class="catThumbs">'+photos+'</div></div></div><div class="catIntro"><div class="catTitle profileHeading"><h1>'+pet.name+'</h1></div><div class="catQuick">'+quickFacts+'</div><div class="profileActions"><a class="btn pink" href="mailto:contact@nopawsleftbehindkittyrescue.com?subject='+encodeURIComponent('Interested in adopting '+pet.name)+'">Interested in adopting '+pet.name+'?</a>'+(pet.url?'<a class="btn teal" href="'+pet.url+'" target="_blank" rel="noopener">View '+pet.name+' on Petfinder</a>':'')+'</div><div class="pairPanel '+(hasBondedPair?'bondedPanel':(hasSiblingPair||hasRequiredPair)?'siblingPanel':'adoptionPolicyPanel')+'">'+pairHeading+pairBody+(pairingNote&&!hasRequiredPair?'<p class="policyQuestion">'+pairingNote+'</p>':'')+policySection+(hasBondedPair||hasSiblingPair||pairingNote?'':'<p class="policyQuestion">'+policyQuestion+'</p>')+'</div></div></div></div></section><section class="section soft"><div class="wrap catSections"><article class="panel bioPanel"><div class="eyebrow">Get to know '+pet.name+'</div><h2>About '+pet.name+'</h2><p>'+pet.bio+'</p></article><article class="panel"><div class="eyebrow">Wellness</div><h2>Health & Care</h2><div class="careGrid">'+careItems.map((x,i)=>'<div class="careItem careTone'+(i%2)+'"><span>'+x[0]+'</span><strong>'+x[1]+'</strong></div>').join("")+'</div></article><article class="panel"><div class="eyebrow">A thoughtful match</div><h2>Ideal Home</h2><div class="compatGrid"><div><span>Children</span><strong>'+pet.kids+'</strong></div><div><span>Dogs</span><strong>'+pet.dogs+'</strong></div><div><span>Other cats</span><strong>'+pet.cats+'</strong></div><div><span>Other animals</span><strong>'+pet.other+'</strong></div></div>'+(shyNote?'<p class="compatNote">'+shyNote+'</p>':'')+(pet.idealHomeNote?'<p class="compatNote">'+pet.idealHomeNote+'</p>':'')+'<p class="compatDisclaimer">'+compatibilityNote+'</p></article><article class="panel adoptPanel"><div class="eyebrow">Next steps</div><h2>How to Adopt</h2><ol class="list"><li>Send an inquiry and mention '+pet.name+'.</li><li>Complete the adoption application provided by the rescue.</li><li>Once approved, arrange an in-person meet-and-greet.</li></ol><p class="muted">You can arrange an in-person meet-and-greet or come visit us at one of our weekend adoption event locations.</p><a class="btn pink" href="mailto:contact@nopawsleftbehindkittyrescue.com?subject='+encodeURIComponent('Interested in adopting '+pet.name)+'">Interested in adopting '+pet.name+'?</a></article></div></section><section class="section"><div class="wrap center"><a class="btn light" style="border:1px solid var(--line)" href="adopt.html">← Back to all adoptable cats</a></div></section>';
+  return '<section class="section catTop"><div class="wrap"><div class="catProfile"><div><div class="catGallery">'+(pet.photos.length?'<img class="catHeroImg" src="'+pet.photos[0]+'" alt="'+pet.name+'">':'<div class="catPhotoPlaceholder" role="img" aria-label="'+pet.name+' photo coming soon" style="min-height:320px;aspect-ratio:4/3;display:grid;place-items:center;background:#f8edf2;color:#ff4993;font-size:56px;border-radius:18px">♡</div>')+'<div class="catThumbs">'+photos+'</div></div></div><div class="catIntro"><div class="catTitle profileHeading"><h1>'+pet.name+'</h1></div><div class="catQuick">'+quickFacts+'</div><div class="profileActions"><a class="btn pink" href="mailto:contact@nopawsleftbehindkittyrescue.com?subject='+encodeURIComponent('Interested in adopting '+pet.name)+'">Interested in adopting '+pet.name+'?</a>'+(pet.url?'<a class="btn teal" href="'+pet.url+'" target="_blank" rel="noopener">View '+pet.name+' on Petfinder</a>':'')+'</div><div class="pairPanel '+(hasBondedPair?'bondedPanel':(hasSiblingPair||hasRequiredPair)?'siblingPanel':'adoptionPolicyPanel')+'">'+pairHeading+pairBody+(pairingNote&&!hasRequiredPair&&!hasSiblingPair?'<p class="policyQuestion">'+pairingNote+'</p>':'')+policySection+(hasBondedPair||hasSiblingPair||pairingNote?'':'<p class="policyQuestion">'+policyQuestion+'</p>')+'</div></div></div></div></section><section class="section soft"><div class="wrap catSections"><article class="panel bioPanel"><div class="eyebrow">Get to know '+pet.name+'</div><h2>About '+pet.name+'</h2><p>'+pet.bio+'</p></article><article class="panel"><div class="eyebrow">Wellness</div><h2>Health & Care</h2><div class="careGrid">'+careItems.map((x,i)=>'<div class="careItem careTone'+(i%2)+'"><span>'+x[0]+'</span><strong>'+x[1]+'</strong></div>').join("")+'</div></article><article class="panel"><div class="eyebrow">A thoughtful match</div><h2>Ideal Home</h2><div class="compatGrid"><div><span>Children</span><strong>'+pet.kids+'</strong></div><div><span>Dogs</span><strong>'+pet.dogs+'</strong></div><div><span>Other cats</span><strong>'+pet.cats+'</strong></div><div><span>Other animals</span><strong>'+pet.other+'</strong></div></div>'+(shyNote?'<p class="compatNote">'+shyNote+'</p>':'')+(pet.idealHomeNote?'<p class="compatNote">'+pet.idealHomeNote+'</p>':'')+'<p class="compatDisclaimer">'+compatibilityNote+'</p></article><article class="panel adoptPanel"><div class="eyebrow">Next steps</div><h2>How to Adopt</h2><ol class="list"><li>Send an inquiry and mention '+pet.name+'.</li><li>Complete the adoption application provided by the rescue.</li><li>Once approved, arrange an in-person meet-and-greet.</li></ol><p class="muted">You can arrange an in-person meet-and-greet or come visit us at one of our weekend adoption event locations.</p><a class="btn pink" href="mailto:contact@nopawsleftbehindkittyrescue.com?subject='+encodeURIComponent('Interested in adopting '+pet.name)+'">Interested in adopting '+pet.name+'?</a></article></div></section><section class="section"><div class="wrap center"><a class="btn light" style="border:1px solid var(--line)" href="adopt.html">← Back to all adoptable cats</a></div></section>';
 }
 if(page==="adopt"){
   const grid=document.querySelector(".catGrid");
