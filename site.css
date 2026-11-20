@@ -172,9 +172,11 @@ body.lightboxOpen{overflow:hidden}
 .compatDisclaimer{font-size:13px;line-height:1.6;color:var(--muted);margin:16px 0 0;padding:13px 15px;background:#f6f8f7;border-left:3px solid #0b8b8e;border-radius:0 12px 12px 0}
 
 /* Matching heart detail for bonded-pair and sibling-pair panels. */
-.bondedPanel,.siblingPanel{position:relative;overflow:hidden;padding-bottom:48px}
-.bondedPanel:before,.siblingPanel:before{content:"♡";position:absolute;right:18px;top:auto;bottom:10px;font-size:34px;line-height:1;color:#ff499344;font-weight:800;pointer-events:none}
-.bondedPanel .eyebrow,.bondedPanel p,.siblingPanel .eyebrow,.siblingPanel p{position:relative;z-index:1}
+.bondedPanel,.siblingPanel{position:relative;overflow:hidden}
+.bondedPanel:before,.siblingPanel:before{content:"♡";position:absolute;right:16px;top:8px;bottom:auto;font-size:32px;line-height:1;color:#ff499344;font-weight:800;pointer-events:none}
+.bondedPanel>.eyebrow,.siblingPanel>.eyebrow{position:relative;z-index:1;padding-right:48px}
+.bondedPanel>p,.siblingPanel>p{position:relative;z-index:1}
+.bondedPanel .policyDivider,.siblingPanel .policyDivider{position:relative;z-index:1}
 
 
 /* Keep the bonded-pair story first, then clearly separate the rescue policy and matching-help note. */
